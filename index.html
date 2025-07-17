@@ -99,7 +99,15 @@ transform: translateY(-4.4cm); /* Sposta il riquadro verso l’alto */
             margin-top: 1.5rem; /* Ridotto */
             padding-top: 1.2rem; /* Ridotto */
             border-top: 1px solid rgba(0,51,102,0.08);
+position: relative; /* Aggiunto */
+
         }
+
+/* Nuovo selettore per spostare solo il contenuto */
+.contact-content {
+    transform: translateY(-0.5cm); /* Sposta solo il testo */
+    margin-bottom: -0.5cm; /* Compensa lo spazio */
+}
 
         .email-link {
             color: var(--primary-color);
@@ -127,15 +135,20 @@ transform: translateY(-4.4cm); /* Sposta il riquadro verso l’alto */
     </div>
 
     <div class="content">
-        <h1>Benvenuto su TrendyGrabber.com</h1>
+        <h1>Benvenuto su TrendyGrabber</h1>
         <p>Stiamo lavorando per portarti un'esperienza eccezionale.</p>
         <p>Il nostro sito sarà online a breve!</p>
-        <p>Resta sintonizzato per le ultime novità e tendenze.</p>
-        
+        <p>Resta sintonizzato</p>
+        <p>per le ultime novità e tendenze.</p>
+
+
         <div class="contact">
-            <p>Per informazioni o collaborazioni:</p>
-            <p><a href="mailto:TrendyGrabber.com@gmail.com" class="email-link">TrendyGrabber.com@gmail.com</a></p>
-        </div>
+	    <div class="contact-content">
+	        <p>Per informazioni o collaborazioni:</p>
+	        <p><a href="mailto:TrendyGrabber.com@gmail.com" class="email-link">TrendyGrabber.com@gmail.com</a></p>
+	    </div>
+	</div>
+
     </div>
 </body>
 </html>
