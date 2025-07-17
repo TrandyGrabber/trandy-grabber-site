@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -145,5 +144,21 @@
             </div>
         </div>
     </div>
+
+ <!-- Script per il carosello automatico (senza visualizzazione) -->
+    <script>
+        // Configurazione
+        const LINGUE = ['it', 'en', 'fr', 'de', 'es', 'ru', 'zh'];
+        const INTERVALLO = 5000; // 5 secondi
+
+        // Avvia il redirect automatico dopo l'intervallo
+        setTimeout(() => {
+            const linguaCorrente = 'fr'; // Modificare questa riga nelle altre lingue
+            const indiceCorrente = LINGUE.indexOf(linguaCorrente);
+            const prossimaLingua = LINGUE[(indiceCorrente + 1) % LINGUE.length];
+            window.location.href = '../' + prossimaLingua + '/index.html';
+        }, INTERVALLO);
+    </script>
+
 </body>
 </html>
